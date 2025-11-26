@@ -82,6 +82,11 @@ p {
   margin-left: 150px;
 }
 
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #navigation-links {
   justify-self: end;
   list-style-type: none;

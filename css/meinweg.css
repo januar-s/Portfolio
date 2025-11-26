@@ -1,0 +1,18 @@
+#JanPortrait_Farbe {
+  position: absolute;
+  width: 523px;
+  height: 365px;
+  transform: rotate(-3.203deg);
+  top: 35vh;
+  right: 10vw;
+}
+
+#JanPortrait_Farbe img {
+  width: 100%;
+  height: 100%;
+  object-fit: auto;
+}
+
+p {
+    max-width: 525px;
+}
