@@ -106,14 +106,6 @@ p {
   margin-left: 40px;
 }
 
-.box {
-  display: block;
-  background-color: greenyellow;
-  border-radius: 10px;
-    width: 100px;
-    height: 100px;
-}
-
 button {
   display: flex;
   justify-content: center;
@@ -125,6 +117,15 @@ button {
   font-size: 16px;
   overflow: hidden;
   position: relative;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  margin-bottom: 20vh;
 }
 
 .button-text {

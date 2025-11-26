@@ -1,12 +1,4 @@
 document.addEventListener("DOMContentLoaded", event => {
-  gsap.to(".box", {
-    duration: 2,
-    x: 200,
-    rotation: 360,
-    repeat: -1,
-    yoyo: true,
-  })
-
   // Function to add hover animations to a button
   function addButtonAnimation(button) {
     const buttonText = button.querySelector(".button-text");
@@ -78,9 +70,11 @@ document.addEventListener("DOMContentLoaded", event => {
     });
   }
 
-  // Apply animations to action button
-  const actionButton = document.querySelector("#action-button");
-  addButtonAnimation(actionButton);
+  // Apply animations to all action buttons
+  const actionButtons = document.querySelectorAll("#action-button");
+  actionButtons.forEach(button => {
+    addButtonAnimation(button);
+  });
 
   // Apply animations to all navigation buttons
   const navButtons = document.querySelectorAll(".nav-button");
