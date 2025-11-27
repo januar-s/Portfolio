@@ -31,11 +31,20 @@
         </section>
 
         <section class="fliesstext">
-            <p>Mein Name ist Jan Schmidt</p>
+            <p>Mein Name ist <span class="hover-name-container">
+                <span class="hover-name" id="jan-schmidt">Jan Schmidt</span>
+                <span class="pronunciation" id="pronunciation-text">ausgesprochen /ˈjaːnˈʃmɪt/</span>
+            </span></p>
         </section>
 
         <section class="fliesstext">
-            <p>Ich bin ein 21-jähriger Bewegtbild-Generalist mit einer Liebe für Indie-Musik. Aus dem Zentrum der Schweiz kreiere ich leidenschaftlich Dokumentarfilme, interaktive Ausstellungen und musikalische Events.</p>
+            <p>Ich bin ein <span class="age-container">21
+                <svg class="age-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43 45" preserveAspectRatio="xMinYMin meet">
+                    <path d="M3.27319 39.681C3.44319 39.681 5.48568 37.3861 8.91515 33.144C10.4507 31.2446 11.3247 29.6669 12.7838 27.6038C18.6369 19.9386 19.7548 18.9058 20.3536 18.5632C20.6975 18.3907 21.1224 18.2207 21.5603 18.0455" stroke="#F70A0C" stroke-width="5" stroke-linecap="round" fill="none"/>
+                    <path d="M2.50049 20.8788C2.92547 21.6438 3.35045 22.4087 5.18431 24.7152C7.01818 27.0217 10.248 30.8465 12.7194 33.4969C16.624 37.6843 19.2345 39.3333 20.9885 40.2322C23.1675 41.2161 24.8185 41.8265 25.5899 41.9553C25.9363 41.9991 26.1913 41.9991 26.454 41.9991" stroke="#F70A0C" stroke-width="5" stroke-linecap="round" fill="none"/>
+                    <path d="M26.1226 6.85135C26.2076 6.3388 26.8901 4.63114 27.9641 3.46308C29.0713 2.25903 30.5836 2.47275 31.2262 2.60024C32.6567 2.88405 32.9892 4.78568 33.5044 6.66977C33.9998 8.48167 33.252 10.4495 32.6093 11.7786C31.751 13.5538 28.5488 15.0831 26.8965 15.8648C25.3387 16.6018 32.5462 16.4637 34.1032 16.6813C35.8997 17.3214 38.4805 18.1842 39.5121 18.398C39.7709 18.4418 40.0259 18.4418 40.2886 18.4418" stroke="#F70A0C" stroke-width="5" stroke-linecap="round" fill="none"/>
+                </svg>
+            </span>-jähriger Bewegtbild-Generalist mit einer Liebe für Indie-Musik. Aus dem Zentrum der Schweiz kreiere ich leidenschaftlich Dokumentarfilme, interaktive Ausstellungen und musikalische Events.</p>
         </section>
 
         <section class="fliesstext">
@@ -62,7 +71,9 @@
     <script src="js/gsap.min.js"></script>
     <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/SplitText.min.js"></script>
+    <script src="js/DrawSVGPlugin.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/meinweg.js"></script>
 </body>
 
 </html>

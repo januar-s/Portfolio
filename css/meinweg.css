@@ -13,6 +13,44 @@
   object-fit: auto;
 }
 
+.fliesstext {
+  margin-bottom: 10vh;
+}
+
 p {
     max-width: 525px;
+}
+
+.hover-name-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-name {
+  cursor: pointer;
+}
+
+.pronunciation {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 18px;
+  font-style: italic;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.age-container {
+  display: inline-block;
+  position: relative;
+}
+
+.age-svg {
+  position: absolute;
+  top: -5px;
+  left: 15px;
+  width: 27.8px;
+  height: 39.5px;
+  pointer-events: none;
+  overflow: visible;
 }
