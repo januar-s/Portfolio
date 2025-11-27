@@ -106,32 +106,16 @@ header a {
   margin-right: 20px;
 }
 
-#intodouction, .eingerueckt, .fliesstext {
-  margin-bottom: 75px;
+.eingerueckt, .fliesstext {
+  margin-bottom: 20vh;
 }
 
 #introduction {
-  margin-bottom: 10vh;
-  margin-bottom: 75px;
+  margin-bottom: 30vh;
 }
 
 .eingerueckt {
   margin-left: 40px;
-}
-
-#JanPortrait {
-  position: absolute;
-  width: 317.924px;
-  height: 432.285px;
-  transform: rotate(8.442deg);
-  top: 20vh;
-  right: 10vw;
-}
-
-#JanPortrait img {
-  width: 100%;
-  height: 100%;
-  object-fit: auto;
 }
 
 button {
@@ -164,4 +148,31 @@ button {
 .nav-button {
   font-size: 12px;
   padding: 8px 16px;
+}
+
+#JanPortrait {
+  position: absolute;
+  width: 317.924px;
+  height: 432.285px;
+  transform: rotate(8.442deg);
+  top: 20vh;
+  right: 10vw;
+}
+
+#JanPortrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: auto;
+}
+
+.split {
+  will-change: transform;
+}
+
+.split * {
+  will-change: transform;
+}
+
+.line {
+  overflow: hidden;
 }
