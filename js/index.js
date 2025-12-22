@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", event => {
               scrollTrigger: {
                 trigger: container,
                 scrub: true,
-                start: "clamp(top 70%)",
+                start: "clamp(top 85%)",
                 end: endPoint
               }
             });
