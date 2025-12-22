@@ -15,6 +15,10 @@ document.addEventListener("DOMContentLoaded", event => {
       if (!textElements.length) return;
 
       textElements.forEach((text) => {
+        // Different settings for h2 vs other elements
+        const isH2 = text.tagName === "H2";
+        const endPoint = isH2 ? "clamp(top 50%)" : "clamp(bottom center)";
+        
         SplitText.create(text, {
           type: "words,lines",
           mask: "lines",
@@ -27,8 +31,8 @@ document.addEventListener("DOMContentLoaded", event => {
               scrollTrigger: {
                 trigger: container,
                 scrub: true,
-                start: "clamp(top 80%)",
-                end: "clamp(bottom center)"
+                start: "clamp(top 70%)",
+                end: endPoint
               }
             });
           }
