@@ -143,6 +143,7 @@ button {
 
 .button-text {
   display: block;
+  color: var(--black);
 }
 
 .nav-button {
@@ -185,7 +186,7 @@ button {
 
   h1 {
     font-size: 40px;
-    margin-bottom: 15vh;
+    margin-bottom: 10vh;
   }
 
   h2 {
@@ -197,8 +198,55 @@ button {
     max-width: 100%;
   }
 
+  header {
+  align-items: start;
+  margin-top: 10px;
+  height: 120px;
+  }
+
+  .website-name {
+  margin-left: 25px;
+  }
+
+  #navigation-links {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  margin-right: 10px;
+  }
+
+  #navigation-links li:has(.header-nummer) {
+  order: -1;
+  }
+
+  .header-nummer{
+  margin-right: 0;
+  }
+
+  .nav-button {
+  font-size: 10px;
+  }
+
+  main {
+    margin-top: 5vh;
+  }
+
   #JanPortrait {
-    display: none;
+    position: relative;
+    width: 200px;
+    height: 272px;
+    align-self: center;
+    top: 0;
+    right: 0;
+    margin-bottom: 5vh;
+  }
+
+  .eingerueckt, .fliesstext {
+  margin-bottom: 10vh;
+  }
+
+  #introduction {
+  margin-bottom: 15vh;
   }
   
 }

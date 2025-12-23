@@ -1,0 +1,23 @@
+#kontakt-images {
+    display: flex;
+}
+
+#kontakt-section {
+    margin-bottom: 0vh;
+}
+
+#mail {
+    width: 1000px;
+    display: block;
+    position: relative;
+    left: -700px;
+    transform: rotate(6deg);
+}
+
+#instagram {
+    height: 700px;
+    display: block;
+    position: relative;
+    left: -500px;
+    transform: rotate(-30deg);
+}
