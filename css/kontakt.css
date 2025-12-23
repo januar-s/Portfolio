@@ -14,10 +14,29 @@
     transform: rotate(6deg);
 }
 
+#mail_img {
+    width: 100%;
+    height: 100%;
+}
+
 #instagram {
     height: 700px;
     display: block;
     position: relative;
     left: -500px;
+    top: 50px;
     transform: rotate(-30deg);
+}
+
+@media screen and (max-width: 768px){
+  #mail {
+    width: 300px;
+    left: -150px;
+  }
+
+  #instagram {
+    height: 200px;
+    left: -100px;
+    top: 25px;
+  }
 }

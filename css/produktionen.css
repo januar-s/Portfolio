@@ -24,6 +24,16 @@
     width: 100%;
     height: auto;
     transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.photo-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .photo-layer {
@@ -44,4 +54,19 @@
 
 .image-container:hover .photo-layer {
     opacity: 1;
+}
+
+.image-container:hover .photo-link {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+
+    .produktion-item {
+        width: 90vw;
+    }
+    
+    .image-container {
+        width: 100%;
+    }
 }

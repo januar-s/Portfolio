@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", event => {
+  // Check if screen is larger than 768px
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+  
+  // Only apply animations on desktop screens
+  if (!isDesktop) {
+    return;
+  }
+  
   // Function to add hover animations to a button
   function addButtonAnimation(button) {
     const buttonText = button.querySelector(".button-text");
