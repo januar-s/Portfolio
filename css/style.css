@@ -12,6 +12,12 @@
   --font: "Courier New", monospace;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
 
 body {
   display: flex;
@@ -19,9 +25,9 @@ body {
   align-items: center;
   justify-content: space-between;
   min-height: 100vh;
-  overflow-x: hidden;
   margin: 0;
   background-color: var(--white);
+  width: 100%;
 }
 
 header {
