@@ -69,4 +69,14 @@
     .image-container {
         width: 100%;
     }
+
+    .image-container:hover .svg-layer,
+    .image-container:hover .photo-layer {
+        opacity: inherit;
+    }
+
+    .photo-layer,
+    .svg-layer {
+        transition: none;
+    }
 }
