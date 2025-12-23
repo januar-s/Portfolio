@@ -48,4 +48,10 @@
     left: -50px;
     top: 25px;
   }
+
+  #kontakt-svg {
+    width: 50%;
+    left: 125px;
+    top: -100px;
+  }
 }
