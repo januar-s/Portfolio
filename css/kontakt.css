@@ -2,7 +2,7 @@
     display: flex;
 }
 
-#kontakt-section {
+.image-section {
     margin-bottom: 0vh;
 }
 
@@ -26,6 +26,15 @@
     left: -300px;
     top: 50px;
     transform: rotate(-30deg);
+}
+
+#kontakt-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: 350px;
+    top: -300px;
 }
 
 @media screen and (max-width: 768px){

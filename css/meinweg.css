@@ -22,7 +22,7 @@ p {
 }
 
 .wide-text {
-  max-width: 550px;
+  max-width: 570px;
 }
 
 .highlight {
@@ -154,4 +154,8 @@ p {
   h1 {
     margin-bottom: 30vh;
   }
+
+  .pronunciation {
+  left: -100px;
+}
 }
