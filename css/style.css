@@ -1,6 +1,7 @@
 @import url('reset.css');
 @import url('fonts.css');
 
+/* Root variables for colors and fonts */
 :root {
   --white: #F8F8F1;
   --black: #0A0907;
@@ -83,6 +84,8 @@ p {
   max-width: 725px;
 }
 
+/* Header styles */
+
 .website-name {
   justify-self: start;
   margin-left: 150px;
@@ -124,18 +127,46 @@ header a {
   margin-left: 40px;
 }
 
+/* Button styles */
+
 button {
   display: flex;
   justify-content: center;
-  padding: 10px 20px;
-  border-radius: 50px;
+  padding: 15px 30px;
   background-color: transparent;
-  border: 2px solid;
-  border-color: var(--black);
+  border: none;
   font-family: var(--font);
   font-size: 16px;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('../fotos/svg/button-border.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+#meinweg-nav-button::before {
+  width: calc(100% + 20px);
+  height: 40px;
+}
+
+#produktionen-nav-button::before {
+  width: calc(100% + 40px);
+  height: 53px;
+}
+
+#kontakt-nav-button::before {
+  width: calc(100% + 20px);
+  height: 40px;
 }
 
 #button {
@@ -156,6 +187,27 @@ button {
   font-size: 12px;
   padding: 8px 16px;
 }
+
+.action-button::before {
+  top: 40%;
+}
+
+#meinweg-action-button::before {
+  width: calc(100% + 20px);
+  height: 55px;
+}
+
+#produktionen-action-button::before {
+  width: calc(100% + 40px);
+  height: 70px;
+}
+
+#kontakt-action-button::before {
+  width: calc(100% + 20px);
+  height: 50px;
+}
+
+/* Photo styles */
 
 #JanPortrait {
   position: absolute;
@@ -184,10 +236,14 @@ button {
   overflow: hidden;
 }
 
+/* Responsive styles */
+
 @media screen and (max-width: 768px) {
+  /* Root variables for colors and fonts */
   main {
     width: 90vw;
     padding: 10px;
+    margin-top: 5vh;
   }
 
   h1 {
@@ -203,6 +259,8 @@ button {
     font-size: 18px;
     max-width: 100%;
   }
+
+  /* Header styles */
 
   header {
   align-items: start;
@@ -229,25 +287,58 @@ button {
   margin-right: 0;
   }
 
+  /* Button styles */
+
   button {
-  padding: 8px 16px;
-  border: 2px solid;
-  border-color: var(--black);
+  padding: 12px 24px;
   font-size: 11px;
   }
 
   #button {
-  gap: 20px;
+  gap: 10px;
   margin-bottom: 10vh;
   }
 
   .nav-button {
   font-size: 10px;
+  padding: 8px 12px;
   }
 
-  main {
-    margin-top: 5vh;
+  .action-button {
+  padding: 10px 20px;
   }
+
+  #meinweg-nav-button::before {
+  width: calc(100% + 20px);
+  height: 30px;
+  }
+
+  #produktionen-nav-button::before {
+  width: calc(100%);
+  height: 40px;
+  }
+
+  #kontakt-nav-button::before {
+  width: calc(100% + 20px);
+  height: 30px;
+  }
+
+  #meinweg-action-button::before {
+  width: calc(100% + 20px);
+  height: 40px;
+  }
+
+  #produktionen-action-button::before {
+  width: calc(100%);
+  height: 50px;
+  }
+
+  #kontakt-action-button::before {
+  width: calc(100% + 20px);
+  height: 35px;
+  }
+
+  /* Photo styles */
 
   #JanPortrait {
     position: relative;

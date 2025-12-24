@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", event => {
   }
 
   // Apply animations to all action buttons
-  const actionButtons = document.querySelectorAll("#action-button");
+  const actionButtons = document.querySelectorAll(".action-button");
   actionButtons.forEach(button => {
     addButtonAnimation(button);
   });
