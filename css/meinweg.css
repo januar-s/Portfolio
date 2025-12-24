@@ -13,6 +13,27 @@
   object-fit: auto;
 }
 
+#ZentrumDerSchweiz {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+#ArrowOlten {
+  position: relative;
+  top: -155px;
+  left: -85px;
+  opacity: 1;
+}
+
+#Olten {
+  position: relative;
+  top: -35px;
+  left: -235px;
+}
+
 .fliesstext {
   margin-bottom: 10vh;
 }
@@ -59,11 +80,6 @@ p {
   background-color: var(--orange);
 }
 
-#animated-word::after {
-  content: '|';
-  animation: blink 1s infinite;
-  margin-left: -5px;
-}
 #farbgestaltung {
   cursor: pointer;
   position: relative;
@@ -93,15 +109,6 @@ p {
   }
   100% {
     background-color: var(--red);
-  }
-}
-
-@keyframes blink {
-  0%, 50% {
-    opacity: 1;
-  }
-  51%, 100% {
-    opacity: 0;
   }
 }
 
@@ -141,6 +148,25 @@ p {
 
 #animated-word {
   opacity: 0.7;
+}
+
+#animated-word::after {
+  content: '|';
+  animation: blink 1s infinite;
+  margin-left: -5px;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+.nogap {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 768px){

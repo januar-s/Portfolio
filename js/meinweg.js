@@ -1,6 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
   const janSchmidt = document.getElementById("jan-schmidt");
   const pronunciation = document.getElementById("pronunciation-text");
+  const zentrumTrigger = document.getElementById("zentrum-trigger");
+  const arrowOlten = document.querySelector("#ArrowOlten");
+
+  // Arrow Olten DrawSVG animation on hover
+  if (zentrumTrigger && arrowOlten) {
+    const arrowPath = arrowOlten.querySelector("path");
+    
+    // Initialize DrawSVG to 0 and opacity to 1
+    if (arrowPath) {
+      gsap.set(arrowPath, { drawSVG: "0%" });
+      gsap.set(arrowOlten, { opacity: 1 });
+    }
+
+    zentrumTrigger.addEventListener("mouseenter", () => {
+      gsap.to(arrowPath, { drawSVG: "0% 100%", duration: 1.5, ease: "power2.out" });
+    });
+
+    zentrumTrigger.addEventListener("mouseleave", () => {
+      gsap.to(arrowPath, { drawSVG: "0%", duration: 0.5, ease: "power2.in" });
+    });
+  }
 
   // Animated word cycling
   const animatedWord = document.getElementById("animated-word");
