@@ -4,23 +4,51 @@ document.addEventListener("DOMContentLoaded", () => {
   const zentrumTrigger = document.getElementById("zentrum-trigger");
   const arrowOlten = document.querySelector("#ArrowOlten");
 
-  // Arrow Olten DrawSVG animation on hover
-  if (zentrumTrigger && arrowOlten) {
+  // Arrow Olten DrawSVG animation on hover (desktop only)
+  if (arrowOlten && zentrumTrigger && window.innerWidth > 768) {
     const arrowPath = arrowOlten.querySelector("path");
+    const oltenImage = document.getElementById("Olten");
     
-    // Initialize DrawSVG to 0 and opacity to 1
-    if (arrowPath) {
+    if (arrowPath && oltenImage) {
+      // Set initial state - path and image not visible
       gsap.set(arrowPath, { drawSVG: "0%" });
-      gsap.set(arrowOlten, { opacity: 1 });
+      gsap.set(oltenImage, { opacity: 0 });
+      
+      // Hover in - draw from both ends to full path
+      zentrumTrigger.addEventListener("mouseenter", () => {
+        gsap.killTweensOf([arrowPath, oltenImage]);
+        gsap.to(arrowPath, {
+          drawSVG: "0% 100%",
+          duration: 1.5,
+          ease: "power2.inOut"
+        });
+        
+        // Show Olten image after 80% of animation (1.2s)
+        gsap.to(oltenImage, {
+          opacity: 1,
+          duration: 0.5,
+          delay: 0.8,
+          ease: "power2.out"
+        });
+      });
+      
+      // Hover out - reverse back to nothing
+      zentrumTrigger.addEventListener("mouseleave", () => {
+        gsap.killTweensOf([arrowPath, oltenImage]);
+        gsap.to(arrowPath, {
+          drawSVG: "0%",
+          duration: 1,
+          ease: "power2.inOut"
+        });
+        
+        // Hide Olten image
+        gsap.to(oltenImage, {
+          opacity: 0,
+          duration: 0.5,
+          ease: "power2.in"
+        });
+      });
     }
-
-    zentrumTrigger.addEventListener("mouseenter", () => {
-      gsap.to(arrowPath, { drawSVG: "0% 100%", duration: 1.5, ease: "power2.out" });
-    });
-
-    zentrumTrigger.addEventListener("mouseleave", () => {
-      gsap.to(arrowPath, { drawSVG: "0%", duration: 0.5, ease: "power2.in" });
-    });
   }
 
   // Animated word cycling
