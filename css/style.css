@@ -54,6 +54,16 @@ main {
   margin-top: 15vh;
 }
 
+footer {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
 h2 {
   font-family: var(--font);
   color: var(--black);
@@ -82,6 +92,17 @@ p {
   font-weight: 400;
   line-height: normal;
   max-width: 725px;
+}
+
+a {
+  font-family: var(--font);
+  color: var(--black);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Header styles */
