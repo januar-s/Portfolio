@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.killTweensOf([arrowPath, oltenImage]);
         gsap.to(arrowPath, {
           drawSVG: "0% 100%",
-          duration: 1.5,
+          duration: 1.2,
           ease: "power2.inOut"
         });
         
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(oltenImage, {
           opacity: 1,
           duration: 0.5,
-          delay: 0.8,
+          delay: 0.5,
           ease: "power2.out"
         });
       });
